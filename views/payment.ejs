@@ -1,0 +1,91 @@
+<%- include('partials/head', { title: 'Payment' }) %>
+<body>
+  <%- include('partials/loader') %>
+  <%- include('partials/header') %>
+  
+  <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-tag">Payments</p>
+            <h1>Choose your payment method.</h1>
+            <p class="hero-subtitle">
+              Scan a QR code below using your preferred app, then open a ticket on
+              our Discord with payment proof to receive your key.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="/billing"
+                class="btn btn-primary btn-lg"
+                >Use Billing System</a
+              >
+              <a href="https://discord.gg/zPwnj9mb6c" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer"
+                >Open Discord Support</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>QR Codes by Currency / Method</h2>
+          <p>Scan with your payment app and confirm the amount matches our prices.</p>
+        </div>
+        <div class="pay-grid">
+          <article class="card pay-card">
+            <h3>Binance (Crypto)</h3>
+            <p class="price-note">USDT / crypto payments</p>
+            <img src="/payment/binance.png" alt="Binance payment QR" />
+            <p class="pay-note">
+              Send the correct USD equivalent based on the pricing table. Include
+              your Discord tag in the note if possible.
+            </p>
+          </article>
+
+          <article class="card pay-card">
+            <h3>eSewa (NPR)</h3>
+            <p class="price-note">Nepal eSewa wallet</p>
+            <img src="/payment/esewa.jpg" alt="eSewa payment QR" />
+            <p class="pay-note">
+              Use local NPR pricing. After payment, send a screenshot and your
+              in‑game / Armora details to staff on Discord.
+            </p>
+          </article>
+
+          <article class="card pay-card">
+            <h3>UPI (INR)</h3>
+            <p class="price-note">India UPI apps</p>
+            <img src="/payment/upi.jpg" alt="UPI payment QR" />
+            <p class="pay-note">
+              Scan with any supported UPI app (PhonePe, GPay, etc.). Make sure the
+              amount matches the INR price quoted by staff.
+            </p>
+          </article>
+        </div>
+
+        <div class="grid" style="max-width: 840px; margin-top: 2rem;">
+          <article class="card">
+            <h3>How to complete your order</h3>
+            <ol>
+              <li>Choose the right plan on the <a href="/#pricing">Pricing</a> section.</li>
+              <li>Select a payment method above and scan the QR code.</li>
+              <li>Send the exact amount required for your chosen product.</li>
+              <li>
+                Join our Discord
+                <a
+                  href="https://discord.gg/zPwnj9mb6c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >here</a
+                >
+                and open a ticket with payment proof.
+              </li>
+              <li>Staff will verify and deliver your key or account access.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+    </main>
+  
+  <%- include('partials/footer') %>
